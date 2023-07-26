@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8051ef5043.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Presentation | Website</title>
+  </head>
+  <body>
+    <!-- Page 1 )Intro) -->
+    <section id="page-1" class="page">
+      <h1>Product Design</h1>
+      <p>
+        Product design is a crucial aspect of creating successful and innovative
+        products. It involves the process of conceptualizing, developing, and
+        refining a product to meet the needs and desires of the target audience
+        while considering various factors like functionality, aesthetics,
+        usability, manufacturability, and cost-effectiveness.
+      </p>
+      <div>
+        <a href="#page-2" class="btn">
+          Next Page <i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section id="page-2" class="page">
+      <h1>User-Centered Approach</h1>
+      <p>
+        A user-centered design approach puts the needs and preferences of the
+        end-users at the forefront. Understanding the target audience's pain
+        points and requirements helps in creating products that are intuitive
+        and easy to use.
+      </p>
+      <div>
+        <a href="#page-1" class="btn btn-dark">
+          Prev Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-3" class="btn">
+          Next Page<i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section id="page-3" class="page">
+      <h1>Market Research</h1>
+      <p>
+        Conducting thorough market research helps identify existing products in
+        the market, understand customer expectations, and identify potential
+        gaps that a new product could fill.
+      </p>
+      <div>
+        <a href="#page-2" class="btn btn-dark">
+          Prev Page<i class="fas fa-arrow-circle-up"></i
+        ></a>
+        <a href="#page-4" class="btn">
+          Next Page<i class="fas fa-arrow-circle-down"></i
+        ></a>
+      </div>
+    </section>
+    <!-- Page 4 -->
+    <section id="page-4" class="page">
+      <h1>Prototyping and Testing</h1>
+      <p>
+        Building prototypes allows designers to test and evaluate the product's
+        performance, usability, and aesthetics. Iterative prototyping and
+        testing help in uncovering design flaws and making necessary
+        improvements.
+      </p>
+      <div>
+        <a href="#page-3" class="btn">
+          Prev Page <i class="fas fa-arrow-circle-up"></i
+        ></a>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      //Smooth Scrolling
+      $(".btn").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
